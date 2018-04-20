@@ -1,0 +1,637 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AUSTIN'S HISTORY ADVENTURE GOTY 2k18</title>
+<link href="gamest.css" rel="stylesheet" type="text/css">
+</head>
+	
+		<style>
+		body{
+			background-color:#2F2F2F
+		}
+	</style>
+	
+<body>
+	<div style="text-align:center;">
+			<label id="Text">yo</label>
+	<br><br><br><br>
+	<input id="b1" type="button" value="1" onclick="uno()">
+	<br><br>
+	<input id="b2" type="button" value="2" onclick="dos()">
+	<br><br>
+	<input id="b3" type="button" value="3" onclick="tres()">
+	<br><br>
+	<input id="b4" type="button" value="4" onclick="cuatro()">
+	<br><br>
+	<input id="b5" type="button" value="5" onclick="cinco()">
+	<br><br>
+	<input id="bok" type="button" value="Ok" onclick="next()">
+	</div>
+	
+	<script> 
+		
+		var room = 1;
+		var roomtype = 1;
+		var ctext = "";
+		var nextr = false;
+		
+		refreshrooms();
+		
+		function uno(){					//first box
+			switch(room){
+					case(1): //start
+					room = 2;
+					rt();
+					break;
+					
+					case(2): //rotcm 1
+					rb(false, "WRONG!, Abraham Lincoln was not president during this time!");
+					break;
+					
+					case(3): //rotcm 2
+					rb(true, "Correct!, The author of this is clearly not a fan of Jackson's policy involving rotations in office.");
+					roomtype = 0;
+					break;
+					
+					case(4): //rotcm 3
+					rb(false, "WRONG!, As far as I know, Andrew Jackson did not cheat to get elected.");
+					roomtype = 0;
+					break;
+					
+					case(6): //tce 1
+					rb(false, "WRONG!, Mr. Burgess did not own a canal in the 1800's.");
+					roomtype = 0;
+					break;
+					
+					case(7): //tce 2
+					rb(false, "WRONG!, $21 is not a lot of money in canal-terms.");
+					roomtype = 0;
+					break;
+					
+					case(8): //tce 3
+					rb(true, "The man is interested in this idea and invests in the canal.");
+					roomtype = 0;
+					break;
+					
+					case(10): //gic 1
+					rb(true, "This gets his attention and leads him up the river to find gold.");
+					roomtype = 0;
+					break;
+					
+					case(11): //gic 2
+					rb(true, "You do not give the man money and end up making no money from your investment.");
+					roomtype = 0;
+					break;
+					
+					case(12): //gic 3
+					rb(true, "The man finds moderate success with his business but does not get rich from this.");
+					roomtype = 0;
+					break;
+					
+					case(14): //taoal 1
+					rb(false, "WRONG! That's the date of the signing of the declaration of independance.");
+					roomtype = 0;
+					break;
+					
+					case(15): //taoal 2
+					rb(true, "Correct! John Wilkes Booth was quoted saying that.");
+					roomtype = 0;
+					break;
+					
+					case(16): //taoal 3
+					rb(false, "WRONG! Lincoln's death was not seen as controversial");
+					roomtype = 0;
+					break;
+					
+					case(18): //yeet 1
+					rb(false, "WRONG! should be obvious");
+					roomtype = 0;
+					break;
+					
+					case(19): //yeet 2
+					rb(false, "idk");
+					roomtype = 0;
+					break;
+					
+					case(20): //yeet 3
+					rb(false, "WRONG! I don't even know what that is!");
+					roomtype = 0;
+					break;
+
+					
+					   }
+		}
+		
+		function dos(){
+			switch(room){				//second box
+					case(1): //start
+					room = 6;
+					rt();
+					break;
+					
+					case(2): //rotcm 1
+					rb(true, "Correct!, Andrew Jackson was president from 1829 to 1837. He was different from all of the presidents before him because he came from a much different background. The background he came from made it much easier for the common man to relate to him. The good public standing he had allowed him to get into office while not being as educated as previous presidents.");
+					roomtype = 0;
+					break;
+					
+					case(3): //rotcm 2
+					rb(false, "WRONG!, If the author was critical he would not compare rotations in office to barbarians invading a country!");
+					roomtype = 0;
+					break;
+					
+					case(4): //rotcm 3
+					rb(false, "WRONG!, Andrew Jackson was not a wealthy elite like previous presidents.");
+					roomtype = 0;
+					break;
+					
+					case(6): //tce 1
+					rb(true, "Correct!, The name of the canal was the erie canal!");
+					roomtype = 0;
+					break;
+					
+					case(7): //tce 2
+					rb(false, "Almost!, The canal made slightly more money than that!");
+					roomtype = 0;
+					break;
+					
+					case(8): //tce 3
+					rb(true, "The man seems confused about why boat building has anything to do with making money and leaves.");
+					roomtype = 0;
+					break;
+					
+					case(10): //gic 1
+					rb(false, "The man pays no attention to you.");
+					roomtype = 0;
+					break;
+					
+					case(11): //gic 2
+					rb(true, "You give the man $100. The man then buys a small amount of mining supplies which he then sells back to people for a reasonable profit. You make a small return from this investment.");
+					roomtype = 0;
+					break;
+					
+					case(12): //gic 3
+					rb(true, "The man makes a reasonable amount of money from this. A gold mining company that comprised of several people working to find gold was much more profitable than searching for gold alone.");
+					roomtype = 0;
+					break;
+					
+					case(14): //taoal 1
+					rb(false, "WRONG! Almost!");
+					roomtype = 0;
+					break;
+					
+					case(15): //taoal 2
+					rb(false, "Not quite. Booth had stronger motives than just disliking Lincoln");
+					roomtype = 0;
+					break;
+					
+					case(16): //taoal 3
+					rb(true, "Correct! The assassination of Abraham Lincoln was the first assassination of a U.S. president.");
+					roomtype = 0;
+					break;
+					
+					case(18): //yeet 1
+					rb(false, "WRONG! really?");
+					roomtype = 0;
+					break;
+					
+					case(19): //yeet 2
+					rb(true, "Correct! This is right!");
+					roomtype = 0;
+					break;
+					
+					case(20): //yeet 3
+					rb(false, "WRONG! It is 12 in the morning. I need to get sleep but i have to work on this project please i need sleep.");
+					roomtype = 0;
+					break;
+					   
+					   }
+		}
+					
+		function tres(){				//third box
+			switch(room){
+					case(1): //start
+					room = 10;
+					rt();
+					break;
+					
+					case(2): //rotcm 1
+					rb(false, "WRONG!, Mr. Burgess has never been the president of the United States!");
+					roomtype = 0;
+					break;
+					
+					case(3): //rotcm 2
+					rb(false, "WRONG!, The author would bring up points to support Jackson if he could go either way.");
+					roomtype = 0;
+					break;
+					
+					case(4): //rotcm 3
+					rb(true, "This is the best response. The main reason Andrew Jackson was elected was that he tried to relate to the public which made the common people trust him more.");
+					roomtype = 0;
+					break;
+					
+					case(6): //tce 1
+					rb(false, "WRONG!, That's not the right canal. That canal might not even exist idk.");
+					roomtype = 0;
+					break;
+					
+					case(7): //tce 2
+					rb(true, "The canal ended up making around $121 million! that's a lot of money!");
+					roomtype = 0;
+					break;
+					
+					case(8): //tce 3
+					rb(true, "The man seems confused about why that would be a good reason to invest in a canal and leaves.");
+					roomtype = 0;
+					break;
+					
+					case(10): //gic 1
+					rb(false, "The man shrugs and ignores you.");
+					roomtype = 0;
+					break;
+					
+					case(11): //gic 2
+					rb(true, "You give the man all of your savings. The man then uses this money to buy a lot of mining-supplies which he then sells back to people for a reasonable profit. Since you invested so much money in his business you end up making back your initial investment plus interest.");
+					roomtype = 0;
+					break;
+					
+					case(12): //gic 3
+					rb(true, "The man finds success in his supplies selling business.");
+					roomtype = 0;
+					break;
+					
+					case(14): //taoal 1
+					rb(true, "Correct! This was the date of the assassination.");
+					roomtype = 0;
+					break;
+					
+					case(15): //taoal 2
+					rb(false, "Not quite. He had stronger motivations than that.");
+					roomtype = 0;
+					break;
+					
+					case(16): //taoal 3
+					rb(false, "WRONG! This event did not start any war.");
+					roomtype = 0;
+					break;
+					
+					case(18): //yeet 1
+					rb(true, "Correct! This is right!");
+					roomtype = 0;
+					break;
+					
+					case(19): //yeet 2
+					rb(false, "i neeeeed to go to sleep");
+					roomtype = 0;
+					break;
+					
+					case(20): //yeet 3
+					rb(true, "CORRECT THIS IS RIGHT WOW I TYPED LIKE 100 OF THESE TONIGHT GOING TO SLEEP NOW BYE");
+					roomtype = 0;
+					break;
+		}
+		}
+		
+		function cuatro(){
+			switch(room){
+					case(1): //start
+					room = 14;
+					rt();
+					break;
+		}
+		}
+		
+		function cinco(){
+			switch(room){
+					case(1): //start
+					room = 18;
+					rt();
+					break;
+		}
+		}
+		function next(){
+			if(nextr == true){
+				nextr = false;
+				room += 1;
+				rt();
+			}
+			if(nextr != 2){
+			roomtype = 2
+			document.getElementById('Text').innerHTML = ctext;
+			refreshrooms();
+			}
+			else{
+				room = 0;
+				roomtype = 1;
+				refreshrooms();
+			}
+		}
+		
+		function rb(coi, wrong){
+			
+			switch(coi){
+					case(true): //if answer is correct
+					roomtype = 0;
+					document.getElementById('Text').innerHTML = wrong;
+					refreshrooms();
+					nextr = true;
+					break;
+					
+					case(false): //if answer is incorrect
+					roomtype = 0;
+					document.getElementById('Text').innerHTML = wrong;
+					refreshrooms();
+					break;
+					
+					  }
+			
+		}
+		
+		function rt(){
+			switch(room){
+					case(2):	//rise of the common man 1
+						roomtype = 2
+
+						yeeb('b1',"Abraham Lincoln")
+						yeeb('b2', "Andrew Jackson")
+						yeeb('b3', "Mr. Burgess")
+						ctext = 'You get sent back in time to Washington D.C., April 20th, 1830. You vaguely remember talking about who was president during this time in history class. Who is it?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					break;
+					
+						case(3):	//rise of the common man 2
+						roomtype = 2
+
+						yeeb('b1',"Supportive")
+						yeeb('b2', "Critical")
+						yeeb('b3', "Neither")
+						ctext = 'You find a local newspaper and read a statement from Arthur J. Stansbury. He is comparing the inauguration of Jackson to “the inundation of the northern barbarians into Rome”. Do you think the author is supportive or critical of Jackson?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(4):	//rise of the common man 3
+						roomtype = 2
+
+						yeeb('b1',"The letter should say he won because he cheated")
+						yeeb('b2', "The letter should say he won because he had more money")
+						yeeb('b3', "The letter should say he won because he attempted to connect with the public more")
+						ctext = 'You see someone in the newspaper expressing confusion about why Andrew Jackson won while being less educated than his opponent. You decide to respond to this and send a letter to the author. What should the letter say?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+					case(5):	//reset
+						roomtype = 0
+						nextr = 2
+						ctext = 'congrats u win'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(6):	//the canal era 1
+						roomtype = 2
+
+						yeeb('b1',"The Burgess canal")
+						yeeb('b2', "The Erie canal")
+						yeeb('b3', "The Smith canal")
+						ctext = 'You travel back in time and end up in New York. You see a large canal being built that seems to start from the hudson river. You remember talking about this in history class. What canal is this?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(7):	//the canal era 2
+						roomtype = 2
+
+						yeeb('b1',"$21 million")
+						yeeb('b2', "$89 million")
+						yeeb('b3', "$121 million")
+						ctext = 'You know that Thomas Jefferson opposed building this canal and that the governer had to allow it to be built. You decide to invest in the canal because you remember it making a large profit in class. How much money did the canal make from its initial $7 million investment?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(8):	//the canal era 3
+						roomtype = 2
+
+						yeeb('b1',"The canal will allow for better transportation and shipping of goods!")
+						yeeb('b2', "The canal will allow for more boats to be built!")
+						yeeb('b3', "The canal will allow mail to be delivered faster!")
+						ctext = 'After investing in the canal someone asks you, "why is this canal a big deal?". What do you say in response?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(9):	//the canal era end
+						roomtype = 0
+						nextr = 2
+						ctext = 'congrats u win'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					break;
+					
+						case(10):	//gold in california 1
+						roomtype = 2
+
+						yeeb('b1',"I spotted gold up the river!")
+						yeeb('b2', "Do you know where this is?")
+						yeeb('b3', "Hey! run up the river for free money!")
+						ctext = 'You travel back in time to 1849 in California. You notice you are next to a river and spot pieces of gold in the river. You see someone down the river from you. What do you say to them?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(11):	//gold in california 2
+						roomtype = 2
+
+						yeeb('b1'," Give the man $0")
+						yeeb('b2', "Give the man $100")
+						yeeb('b3', "Give the man $1000")
+						ctext = 'The man is James Marshall and after fiding gold he tells everyone. After arriving in the town, you find a man who is asking people for money for gold-mining supplies. How much money do you give him?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(12):	//gold in california 3
+						roomtype = 2
+
+						yeeb('b1',"Selling land along the rivers")
+						yeeb('b2', "Gold-mining company")
+						yeeb('b3', "Gold-mining supplies store")
+						ctext = 'You decide to help someone open a business during the gold rush. They ask you which type of business do you think will make them the most profit.'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(13):	//gold in cali end
+						roomtype = 0
+						nextr = 2
+						ctext = 'congrats u win'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(14):	//The assassination of Abraham Lincoln 1
+						roomtype = 2
+
+						yeeb('b1',"July 4, 1776")
+						yeeb('b2', "March 13, 1864")
+						yeeb('b3', "April 14, 1865")
+						ctext = 'You travel back in time and end up at Fords Theater, Washington D.C. You realize this is the place were Abraham Lincoln was assassinated and you try to remember when that took place.'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(15):	//The assassination of Abraham Lincoln 2
+						roomtype = 2
+
+						yeeb('b1','To "avenge the south"')
+						yeeb('b2', "Because he strongly disliked Lincoln")
+						yeeb('b3', "Because he strongly disliked the Union")
+						ctext = 'You find a local newspaper and see it is just weeks after the assassination and you see articles that theorize the motive of the killer. What was the main motive of the killer?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(16):	//The assassination of Abraham Lincoln 3
+						roomtype = 2
+
+						yeeb('b1',"Because it was controversial")
+						yeeb('b2', "Because it was the first assassination of a U.S. president")
+						yeeb('b3', "Because it marked the start of a war")
+						ctext = 'You think back to history class. Why was this a major turning point in U.S. history?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(17):	//The assassination of Abraham Lincoln end
+						roomtype = 0
+						nextr = 2
+						ctext = 'congrats u win'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(18):	//The assassination of Abraham Lincoln 1
+						roomtype = 2
+
+						yeeb('b1',"Barack Obama")
+						yeeb('b2', "Thomas Jefferson")
+						yeeb('b3', "Warren Harding")
+						ctext = 'You travel back in time to the some time between 1920 and 1923. Who is president during this time?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(19):	//The assassination of Abraham Lincoln 2
+						roomtype = 2
+
+						yeeb('b1','')
+						yeeb('b2', "Freeze on the production of battleships")
+						yeeb('b3', "Cease fire")
+						ctext = 'You read a newspaper that talks about national affairs between the U.S. and other countries. In the time after WW1 what treaty would have been passed during this time?'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(20):	//The assassination of Abraham Lincoln 3
+						roomtype = 2
+
+						yeeb('b1',"The panama controversy")
+						yeeb('b2', "Starting rotations in office")
+						yeeb('b3', "Lending money from the national treasury to friends of his")
+						ctext = 'You learn from the newspaper that there is a lot of controversy around Warren Harding. What controversy was he involved in.'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+						case(21):	//The assassination of Abraham Lincoln end
+						roomtype = 0
+						nextr = 2
+						ctext = 'congrats u win'
+						document.getElementById('Text').innerHTML = ctext;
+						refreshrooms();
+					
+					break;
+					
+					   }
+		}
+		
+		function refreshrooms(){
+		switch(roomtype){
+				case(0): //continue
+					document.getElementById('bok').value = 'Ok';
+					dip('b1')
+					dip('b2')
+					dip('b3')
+					dip('b4')
+					dip('b5')
+					rip('bok')
+					document.getElementById('bok').style = 'text-align:center;';
+				break;
+					 
+				case(1): //choose adventure (5)	
+					dip('bok')
+					rip('b1')
+					rip('b2')
+					rip('b3')
+					rip('b4')
+					rip('b5')
+				
+					yeeb('b1', "The rise of the common man")
+					yeeb('b2', "The canal era")
+					yeeb('b3', "Gold in california")
+					yeeb('b4', "The assassination of Abraham Lincoln")
+					yeeb('b5', "Domestic and international politics")
+				room = 1;
+					document.getElementById('Text').innerHTML = 'Choose your turning point in history!';
+				break;
+					   
+				case(2): //choose option (3)
+					dip('bok')
+					dip('b5')
+					dip('b4')
+					rip('b3')
+					rip('b2')
+					rip('b1')	
+			    break;
+				
+					   }
+		}
+		
+			function yeeb(thing, w) { //x.style.display = "block" <-- to reappear
+    document.getElementById(thing).value = w
+    }
+			
+			function dip(thing) { //x.style.display = "block" <-- to reappear
+	var x = document.getElementById(thing);
+    x.style.display = "none";
+    }
+	
+			function rip(thing) { //x.style.display = "block" <-- to reappear
+	var x = document.getElementById(thing);
+    x.style = "text-align:center;";
+    }	
+		
+	</script>
+	
+</body>
+</html>

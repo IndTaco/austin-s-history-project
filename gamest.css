@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+#header{
+	background-color:#3B3B3B;
+}
+
+#b1{
+	font-family: 'Tahoma';
+	margin-left: center;
+	background-color: #0A9200;
+    border: none;
+    color: white;
+    padding: 15px 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#b2{
+	font-family: 'Tahoma';
+	margin-left: center;
+	background-color: #0A9200;
+    border: none;
+    color: white;
+    padding: 15px 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#b3{
+	left: 44px;
+	font-family: 'Tahoma';
+	margin-left: center;
+	background-color: #0A9200;
+    border: none;
+    color: white;
+    padding: 15px 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#b4{
+	left: 44px;
+	font-family: 'Tahoma';
+	margin-left: center;
+	background-color: #0A9200;
+    border: none;
+    color: white;
+    padding: 15px 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#b5{
+	left: 44px;
+	font-family: 'Tahoma';
+	margin-left: center;
+	background-color: #0A9200;
+    border: none;
+    color: white;
+    padding: 15px 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#bok{
+	left: 44px;
+	font-family: 'Tahoma';
+	margin-left: center;
+	background-color: #0A9200;
+    border: none;
+    color: white;
+    padding: 15px 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#Text{
+	font-family: 'Tahoma';
+	font-size: 20px;
+	color: white;
+	text-align: center;
+    text-decoration: none;
+}
